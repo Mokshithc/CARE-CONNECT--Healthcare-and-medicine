@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="/public/css/stylebook.css">
+</head>
+<body>
+    <header>
+        <h1>Book an Appointment</h1>
+        <a href="careconnect.html">← Back to Home</a>
+    </header>
+
+    <main>
+        <form id="appointmentForm">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="hospital">Select Hospital:</label>
+            <select id="hospital" required>
+                <option value="Apollo">Apollo Hospital</option>
+                <option value="Fortis">Fortis Hospital</option>
+                <option value="Manipal">Manipal Hospital</option>
+                <option value="Sparsh">Sparsh hospital</option>
+            </select>
+
+            <label for="department">Select Department:</label>
+            <select id="department" required>
+                <option value="Dermatology">Dermatology</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Orthopedic ">Orthopedic</option>
+            </select>
+
+            <label for="doctor">Select Doctor:</label>
+            <select id="doctor" required>
+                <option value="Dr. Smith">Dr. Smith</option>
+                <option value="Dr. Johnson">Dr. Johnson</option>
+                <option value="Dr. Patel">Dr. Patel</option>
+            </select>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="time">Select Time Slot:</label>
+            <input type="time" id="time" required>
+
+            <button type="submit">Confirm Appointment</button>
+        </form>
+    </main>
+
+    <script src="appointment.js"></script>
+</body>
+</html>

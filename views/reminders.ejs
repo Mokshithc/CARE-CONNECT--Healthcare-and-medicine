@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Reminders</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Care connect</h1>
+    <nav>
+      <a href="/reminders">Reminders</a> |
+      <a href="/reminders/new">Add New Reminder</a> |
+      <a href="/logout">Logout</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Your Reminders</h2>
+    <% if (reminders.length === 0) { %>
+      <p>No reminders found. <a href="/reminders/new">Create one</a>.</p>
+    <% } else { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Medication</th>
+            <th>Schedule (HH:mm)</th>
+            <th>Message</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% reminders.forEach(reminder => { %>
+            <tr>
+              <td><%= reminder.medication %></td>
+              <td><%= reminder.schedule %></td>
+              <td><%= reminder.message %></td>
+              <td>
+                <a href="/reminders/edit/<%= reminder.id %>">Edit</a>
+                <form action="/reminders/delete/<%= reminder.id %>" method="POST" style="display:inline;">
+                  <button type="submit" onclick="return confirm('Are you sure?');">Delete</button>
+                </form>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } %>
+  </main>
+</body>
+</html>

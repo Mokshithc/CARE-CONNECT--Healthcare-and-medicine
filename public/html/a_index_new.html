@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AspireAI - Welcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .logo-container {
+            text-align: center;
+            animation: zoomIn 1.5s ease-in-out forwards;
+        }
+
+        .logo-container img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .logo-container h1 {
+            font-size: 32px;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 1s forwards;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="health care">
+    </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Goal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa, #e0f7fa);
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+
+        .signup-btn {
+            background-color: #4CAF50;
+        }
+
+        .login-btn {
+            background-color: #4A90E2;
+        }
+
+        .signup-btn:hover {
+            background-color: #388E3C;
+        }
+
+        .login-btn:hover {
+            background-color: #357ABD;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CARE CONNECT</h1>
+    <p></p>
+
+    <div class="btn-container">
+        <a href="/views/register.ejs" class="btn signup-btn">Sign Up</a>
+        <a href="/views/login.ejs" class="btn login-btn">Login</a>
+    </div>
+
+</body>
+</html>
+

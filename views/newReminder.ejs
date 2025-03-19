@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Reminder</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Care connect</h1>
+    <nav>
+      <a href="/reminders">Reminders</a> |
+      <a href="/logout">Logout</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Create New Reminder</h2>
+    <form action="/reminders/new" method="POST">
+      <div>
+        <label>Medication:</label>
+        <input type="text" name="medication" required>
+      </div>
+      <div>
+        <label>Schedule (HH:mm):</label>
+        <input type="text" name="schedule" placeholder="e.g., 14:30" required>
+      </div>
+      <div>
+        <label>Message:</label>
+        <input type="text" name="message" required>
+      </div>
+      <button type="submit">Create Reminder</button>
+    </form>
+  </main>
+</body>
+</html>
