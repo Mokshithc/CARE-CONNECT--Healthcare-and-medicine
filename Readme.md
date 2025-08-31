@@ -2,7 +2,7 @@
 
 A voice-based medication reminder system that automatically calls users at scheduled times to remind them to take their medication. Built with Twilio, Node.js, and Node-Schedule.
 
-![Care Connect Demo](https://imgur.com/placeholder.png) <!-- Add a demo image/gif here -->
+
 
 ## Features ✨
 - Automated voice calls for medication reminders.
@@ -20,7 +20,7 @@ A voice-based medication reminder system that automatically calls users at sched
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/care-connect.git
+   git clone https://github.com/Mokshithc/care-connect.git
    cd care-connect
 How to run
 
@@ -32,7 +32,7 @@ TWILIO_ACCOUNT_SID=
 TWILIO_AUTH_TOKEN=
 TWILIO_PHONE_NUMBER=
 PORT=3000
-SESSION_SECRET=f8f2890078886b53dae7cacd588393764a476bff60be4468e94a71222bbb4777
+SESSION_SECRET=
 
 
  MySQL 
