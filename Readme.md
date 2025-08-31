@@ -22,3 +22,21 @@ A voice-based medication reminder system that automatically calls users at sched
    ```bash
    git clone https://github.com/your-username/care-connect.git
    cd care-connect
+How to run
+
+add ur twilio auth token ,number , sid  and ur local mysql db details  in .env file
+
+
+ Twilio 
+TWILIO_ACCOUNT_SID=
+TWILIO_AUTH_TOKEN=
+TWILIO_PHONE_NUMBER=
+PORT=3000
+SESSION_SECRET=f8f2890078886b53dae7cacd588393764a476bff60be4468e94a71222bbb4777
+
+
+ MySQL 
+MYSQL_HOST=localhost
+MYSQL_USER=root
+MYSQL_PASSWORD=
+MYSQL_DATABASE=medication_reminder_db
