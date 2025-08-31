@@ -1,16 +1,15 @@
-// routes/auth.js
+
 const express = require('express');
 const router = express.Router();
 const { User } = require('../models');
 const bcrypt = require('bcrypt');
 
-// GET registration form
+
 router.get('/register', (req, res) => {
   res.render('register', { error: null });
 });
 
 
-// POST registration
 router.post('/register', async (req, res) => {
   const { name, email, phone, password, confirmPassword } = req.body;
   if (password !== confirmPassword) {
@@ -26,12 +25,12 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// GET login form
+
 router.get('/login', (req, res) => {
   res.render('login', { error: null });
 });
 
-// POST login
+
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
   try {

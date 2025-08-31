@@ -1,7 +1,7 @@
-// models/index.js
+
 const { Sequelize } = require('sequelize');
 
-// Create a Sequelize instance using MySQL connection parameters from .env
+
 const sequelize = new Sequelize(
   process.env.MYSQL_DATABASE,
   process.env.MYSQL_USER,
@@ -9,7 +9,7 @@ const sequelize = new Sequelize(
   {
     host: process.env.MYSQL_HOST,
     dialect: 'mysql',
-    logging: true  // set to true to see SQL queries in the console
+    logging: false  // set to true to see SQL queries in the console
   }
 );
 

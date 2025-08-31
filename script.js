@@ -1,5 +1,5 @@
 // Toggle Menu Functionality
-document.getElementById("menuBtn").addEventListener("click", function () {
+document.getElementById("menuBtn").addEventListener("click",  ()=> {
     let menu = document.getElementById("menu");
     if (menu.classList.contains("hidden")) {
         menu.classList.remove("hidden");

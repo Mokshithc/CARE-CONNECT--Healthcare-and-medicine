@@ -4,7 +4,7 @@ const router = express.Router();
 const { Reminder } = require('../models');
 const scheduleJobManager = require('../scheduler');
 
-// Middleware to check if user is logged in
+
 function isAuthenticated(req, res, next) {
   if (req.session.userId) {
     return next();
@@ -12,7 +12,7 @@ function isAuthenticated(req, res, next) {
   res.redirect('/login');
 }
 
-// List reminders for the logged-in user
+
 router.get('/', isAuthenticated, async (req, res) => {
   try {
     const reminders = await Reminder.findAll({ where: { UserId: req.session.userId } });
@@ -23,12 +23,11 @@ router.get('/', isAuthenticated, async (req, res) => {
   }
 });
 
-// Show form to create a new reminder
 router.get('/new', isAuthenticated, (req, res) => {
   res.render('newReminder');
 });
 
-// Create a new reminder
+
 router.post('/new', isAuthenticated, async (req, res) => {
   const { medication, schedule, message } = req.body;
   try {
@@ -38,7 +37,7 @@ router.post('/new', isAuthenticated, async (req, res) => {
       message,
       UserId: req.session.userId
     });
-    // Schedule the new reminder
+   
     scheduleJobManager.scheduleReminder(reminder);
     res.redirect('/reminders');
   } catch (error) {
@@ -47,7 +46,6 @@ router.post('/new', isAuthenticated, async (req, res) => {
   }
 });
 
-// Show form to edit an existing reminder
 router.get('/edit/:id', isAuthenticated, async (req, res) => {
   try {
     const reminder = await Reminder.findOne({ where: { id: req.params.id, UserId: req.session.userId } });
@@ -61,7 +59,7 @@ router.get('/edit/:id', isAuthenticated, async (req, res) => {
   }
 });
 
-// Update a reminder
+
 router.post('/edit/:id', isAuthenticated, async (req, res) => {
   const { medication, schedule, message } = req.body;
   try {
@@ -80,7 +78,7 @@ router.post('/edit/:id', isAuthenticated, async (req, res) => {
   }
 });
 
-// Delete a reminder
+
 router.post('/delete/:id', isAuthenticated, async (req, res) => {
   try {
     const reminder = await Reminder.findOne({ where: { id: req.params.id, UserId: req.session.userId } });

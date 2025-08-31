@@ -50,8 +50,9 @@ async function makeCall(reminder) {
     const twiml = `
       <Response>
         <Say voice="woman" language="en-US">
-          Reminder: this is care connect ${reminder.medication}. ${reminder.message}
+          Reminder: this is care connect . ${reminder.message} ${reminder.medication}
         </Say>
+       
       </Response>
     `;
 
